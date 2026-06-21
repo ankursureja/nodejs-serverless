@@ -1,0 +1,1835 @@
+{
+	"info": {
+		"_postman_id": "769947a2-cd54-4c13-a851-d30a542f9c45",
+		"name": "apotech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12087884"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"name\": \"Ankur Sureja\",\n  \"phoneNumber\": \"+919639639639\",\n  \"password\": \"Ankur@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/register",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"name\": \"Ankur Sureja\",\n  \"phoneNumber\": \"+919639639639\",\n  \"password\": \"Ankur@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/register",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-pZXIrz8b7gCALrOcGHoz8z4bS18\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:36:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"userSub\": \"6193cd3a-9091-703d-fe5a-7ddd6607fb72\",\n        \"userConfirmed\": false,\n        \"message\": \"Registration successful.\"\n    },\n    \"timestamp\": \"2026-06-21T19:36:32.119Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"password\": \"Ankur@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"password\": \"Ankur@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/login",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4267"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10ab-eaUwnQ05yipKAQMNKCf//y9YnOo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:40:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"accessToken\": \"eyJraWQiOiJaVFlMTjU1UE50WWdUVmlxcVEweEorU0c5VEFoaS95a3Awc1pGVE1WNDRNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImlzcyI6Imh0dHBzOi8vY29nbml0by1pZHAuYXAtc291dGgtMS5hbWF6b25hd3MuY29tL2FwLXNvdXRoLTFfcjVKdlBjYlJPIiwiY2xpZW50X2lkIjoiNzBvb29hNGUyY3F2OWE1cWgzaHVncnBmc2ciLCJvcmlnaW5fanRpIjoiMDRjOWIxMDctZGFhNi00OWYxLWI5NjQtMjVmMDM0NTczOWJlIiwiZXZlbnRfaWQiOiJiYWVjZDdhZS0xZWFjLTQyYmYtYmNkYS01NDQ4MjVlM2E2MmUiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNzgyMDcwODU4LCJleHAiOjE3ODIwNzgwNTgsImlhdCI6MTc4MjA3MDg1OCwianRpIjoiNDliNWQwZDAtYTE1YS00YTNhLWJmM2MtMjk4MjIzNWQyODllIiwidXNlcm5hbWUiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIifQ.AU9DyOcwbJhjyNfbaIufuYMCfkG557Szu54U8LbmZjcMpWknYC6ydneHU5OpozcO3-u9UEdPoAJzslq6Kgytve9O6oLhd9rmz8qxT9upQiof8jVytj_g0Kn5zVH89K1gjEWiEYh522zXfP7Vtzx5EXz9e1myY250jq_Mta2Nt1RLzrbh7h1UuueLqMmmQn-G2bFn49YTUBAcn0U9bjJ6NnQIeImOH9UTRgKG7Kf6dzXVh8l1LJdbox0lekLiwaFjPLhDfGDdog0tZQ_16FN9CYQjsea2O7rZiO8EQArXY3JMbegFt7BHCqlVKoDknRdPf7LrKbFIHWLhwtndF800Sw\",\n        \"refreshToken\": \"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.B6pfsFC8_GKjurrT4kbmDtHAaDOrjm5H4RiUUtc4ctt9Hsbbw84WaVhFvhU6khWb8af6lIipgTlcq2BDldbTvwvOTsB-MHNGDrcKyGsZQxvLVpVgM4HkyNpekJ18aZe8Wua2TmnHMqNJphY-LpRM1KCMmrrsnR7nVB5gfqUfaQ5-1_NnaTGZzFwMkIPS_jD5F6AGWWGbLsxakbAOjmuDvKdr_EGxwTa5utd2Yi5TiZycQpxB5HZMihWU1DgS_fXBRQbXg60vlIdMB7bzwiRIbq3yvx7z_dfaw_zA1CVYYc7sp30pAYoCVqasxT0hYrrZNkHLFvn3f0z3muVLbNMKhA.eLOEl1H4ptRlk3lu.hcWuGF7b2ZDL9FNSY0NkWVbDCwiMi92vTwv2IiGIHNQci8e9wCbzaiDaQKu3D4ZIo7pUdKHgyB48LAXYXrFPnv0-ZA7ibcTchHZMRMazw8elS2w6_M-niZ4uCqdF6wZfmQQT_BcXftrQyiSGUuN2USG2hfs3x-OejuUsi9nVMiWkal83tlgZZ-ofkXExmDSpRsrRrqvLxFrI3snPm2IgKXl2BgqGnmc-vK9YlwPlg_He-aEgJFJvgIlNn6JmzKX7PNzbD5QJgl53vjOVOYaZaIsfxpjYoB-sYKiaemzSqz20ozV6ZD6b65fG3GoYrV4Y3htD6WIzwJ9OaGRvT2jCLqPDzCyRUPsiRBG7_AUCfFGbxQxNRbyVVy90ubhnYlrVEDp7W3FbzX1QahfacgZ6SjfcazXU8BzGLG62pPWyepxM0MQNV7CQf_x0A86pO1rjs9EQXHF4hWOjCWqDvwK1dxjwXzrba2OwzIIITUfsEAW3m5uNXpDBzIWG2oVUKyRze7A0P6ewNBm1fe56unWcz6Srwkfu5bhej2CZQc3yK7b95Q7lNiFOEx4cmFAYJ4MokOTwhObJ5tCHiIXDqYUrq-pzcmQXJXj-9cSm6zRBy1YJUYLDuKYntN6PEl_ebjPsG8WIe03NodhwdLGOzetYallZslJo70OtgVQwus3-M-ZkX8KwXE-yExmm77pxCUH5D273lQ-kKct9lgWVc-43yCqLiePbyvjjBjjPNU9bJCs3rG0RoKCNlFA4Ufopz6e7RhyPitD2Pnr5ahk9m1m10drJOR4rBv2hI8_glUGKEYKg6961SOmM3qhoewFKdGj8U-MXjGqLDSQEzUJVVu4-cO4ddjHIW7G82zI8p96uMaJZ7EIZKkZ_CKHAPpen1q5WyfD-SxmLSc1GZ2_L86l2VRp3tuvBMYqHIv6lFapXxQMHMUR6ci8DaRxEP8VSUJ9faSM78nFIvrWKRVTw7avbcoHmnggdW13ccmh4BnFlJaYTQ_HOfxwPanhXB7tJRaB1QU3-LJbLC8QMN8fIY10aevZjgVtRUCNIEMUsrRzyCMhJl22HsFqgZ08IAu6_7QymWbxZkPKYdJscKr3gzkhn0fL2WqkhEmwD6x7BOh5euMjb0F1jtGXMj0yTNigT9JAt6BggFgzma_0UQ6cVgV9SuVbnbngQyZaYnCtpUSlcY4p12wcDFErSNM0PcyhPazoTKnuA70xh_y-ggG1EFOiUYvu-pJQN-SzZvNe_RXQfipEaOm2XWQHDeb8Hu7C_KAxwJ1wpwm87evQ0zyczrEk0h9n2gBXvhR8FTFbgQBY-wO31JDicJLiTrVgy.hnqgILkoGQ6qo50FzdzVJQ\",\n        \"idToken\": \"eyJraWQiOiI5U3JXZHdVbDUwUVJ0SXdvVE1UZUtnbzMxZkFreCs5Y1dQWDE3UWs4cnVnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbS9hcC1zb3V0aC0xX3I1SnZQY2JSTyIsInBob25lX251bWJlcl92ZXJpZmllZCI6dHJ1ZSwiY29nbml0bzp1c2VybmFtZSI6IjYxOTNjZDNhLTkwOTEtNzAzZC1mZTVhLTdkZGQ2NjA3ZmI3MiIsIm9yaWdpbl9qdGkiOiIwNGM5YjEwNy1kYWE2LTQ5ZjEtYjk2NC0yNWYwMzQ1NzM5YmUiLCJhdWQiOiI3MG9vb2E0ZTJjcXY5YTVxaDNodWdycGZzZyIsImV2ZW50X2lkIjoiYmFlY2Q3YWUtMWVhYy00MmJmLWJjZGEtNTQ0ODI1ZTNhNjJlIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3ODIwNzA4NTgsIm5hbWUiOiJBbmt1ciBTdXJlamEiLCJwaG9uZV9udW1iZXIiOiIrOTE5NjM5NjM5NjM5IiwiZXhwIjoxNzgyMDc0NDU4LCJpYXQiOjE3ODIwNzA4NTgsImp0aSI6ImU2ODg0ODVmLWEwZWEtNDkzZi05MmZiLWFkNzk3MjRlZGMyYyIsImVtYWlsIjoiYW5rdXJzdXJlamFAZ21haWwuY29tIn0.yCJoGQ4E3IbsbPBqkEg-hf9sh-INjyE6dO1WZOoDbGScaUzbk02EoM0Zw-PrXnGPYZoeLOgfR6F5VSY4T7uUboZ3UzyvHJJ0PW9uTY4Tgh5YgCOOHhatPFRWv04pr56BxJJwlqTOM3jgO0pYjhGIr2UrUzV7y1OgX___99f4p2ZVDufjfFdc56Ka2B5fB2Xwk2vPGPWW0CL4MfnZ5RZLN5IU6tA4nm71piW5fYthxh8V37DZThsBysNHEt4WoeaxrK-ac09A4nPmluBKGujrt5MNHQQBUP2jYjZGKfgf_gojT0WiUpzIWv10CoUJvdeEqthvCw04CudXvg2CJe-VIQ\",\n        \"expiresIn\": 7200,\n        \"tokenType\": \"Bearer\"\n    },\n    \"timestamp\": \"2026-06-21T19:40:58.064Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Activate user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ankursureja@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/activate-user",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"activate-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Activate user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ankursureja@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/activate-user",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"activate-user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-Oq2CsAhnm3vfUJyPq/Ffl5QjYyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:39:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Your account has been activated successfully. You can now log in.\"\n    },\n    \"timestamp\": \"2026-06-21T19:39:37.429Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refreshToken\": \"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.B6pfsFC8_GKjurrT4kbmDtHAaDOrjm5H4RiUUtc4ctt9Hsbbw84WaVhFvhU6khWb8af6lIipgTlcq2BDldbTvwvOTsB-MHNGDrcKyGsZQxvLVpVgM4HkyNpekJ18aZe8Wua2TmnHMqNJphY-LpRM1KCMmrrsnR7nVB5gfqUfaQ5-1_NnaTGZzFwMkIPS_jD5F6AGWWGbLsxakbAOjmuDvKdr_EGxwTa5utd2Yi5TiZycQpxB5HZMihWU1DgS_fXBRQbXg60vlIdMB7bzwiRIbq3yvx7z_dfaw_zA1CVYYc7sp30pAYoCVqasxT0hYrrZNkHLFvn3f0z3muVLbNMKhA.eLOEl1H4ptRlk3lu.hcWuGF7b2ZDL9FNSY0NkWVbDCwiMi92vTwv2IiGIHNQci8e9wCbzaiDaQKu3D4ZIo7pUdKHgyB48LAXYXrFPnv0-ZA7ibcTchHZMRMazw8elS2w6_M-niZ4uCqdF6wZfmQQT_BcXftrQyiSGUuN2USG2hfs3x-OejuUsi9nVMiWkal83tlgZZ-ofkXExmDSpRsrRrqvLxFrI3snPm2IgKXl2BgqGnmc-vK9YlwPlg_He-aEgJFJvgIlNn6JmzKX7PNzbD5QJgl53vjOVOYaZaIsfxpjYoB-sYKiaemzSqz20ozV6ZD6b65fG3GoYrV4Y3htD6WIzwJ9OaGRvT2jCLqPDzCyRUPsiRBG7_AUCfFGbxQxNRbyVVy90ubhnYlrVEDp7W3FbzX1QahfacgZ6SjfcazXU8BzGLG62pPWyepxM0MQNV7CQf_x0A86pO1rjs9EQXHF4hWOjCWqDvwK1dxjwXzrba2OwzIIITUfsEAW3m5uNXpDBzIWG2oVUKyRze7A0P6ewNBm1fe56unWcz6Srwkfu5bhej2CZQc3yK7b95Q7lNiFOEx4cmFAYJ4MokOTwhObJ5tCHiIXDqYUrq-pzcmQXJXj-9cSm6zRBy1YJUYLDuKYntN6PEl_ebjPsG8WIe03NodhwdLGOzetYallZslJo70OtgVQwus3-M-ZkX8KwXE-yExmm77pxCUH5D273lQ-kKct9lgWVc-43yCqLiePbyvjjBjjPNU9bJCs3rG0RoKCNlFA4Ufopz6e7RhyPitD2Pnr5ahk9m1m10drJOR4rBv2hI8_glUGKEYKg6961SOmM3qhoewFKdGj8U-MXjGqLDSQEzUJVVu4-cO4ddjHIW7G82zI8p96uMaJZ7EIZKkZ_CKHAPpen1q5WyfD-SxmLSc1GZ2_L86l2VRp3tuvBMYqHIv6lFapXxQMHMUR6ci8DaRxEP8VSUJ9faSM78nFIvrWKRVTw7avbcoHmnggdW13ccmh4BnFlJaYTQ_HOfxwPanhXB7tJRaB1QU3-LJbLC8QMN8fIY10aevZjgVtRUCNIEMUsrRzyCMhJl22HsFqgZ08IAu6_7QymWbxZkPKYdJscKr3gzkhn0fL2WqkhEmwD6x7BOh5euMjb0F1jtGXMj0yTNigT9JAt6BggFgzma_0UQ6cVgV9SuVbnbngQyZaYnCtpUSlcY4p12wcDFErSNM0PcyhPazoTKnuA70xh_y-ggG1EFOiUYvu-pJQN-SzZvNe_RXQfipEaOm2XWQHDeb8Hu7C_KAxwJ1wpwm87evQ0zyczrEk0h9n2gBXvhR8FTFbgQBY-wO31JDicJLiTrVgy.hnqgILkoGQ6qo50FzdzVJQ\",\n  \"idToken\": \"eyJraWQiOiI5U3JXZHdVbDUwUVJ0SXdvVE1UZUtnbzMxZkFreCs5Y1dQWDE3UWs4cnVnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbS9hcC1zb3V0aC0xX3I1SnZQY2JSTyIsInBob25lX251bWJlcl92ZXJpZmllZCI6dHJ1ZSwiY29nbml0bzp1c2VybmFtZSI6IjYxOTNjZDNhLTkwOTEtNzAzZC1mZTVhLTdkZGQ2NjA3ZmI3MiIsIm9yaWdpbl9qdGkiOiIwNGM5YjEwNy1kYWE2LTQ5ZjEtYjk2NC0yNWYwMzQ1NzM5YmUiLCJhdWQiOiI3MG9vb2E0ZTJjcXY5YTVxaDNodWdycGZzZyIsImV2ZW50X2lkIjoiYmFlY2Q3YWUtMWVhYy00MmJmLWJjZGEtNTQ0ODI1ZTNhNjJlIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3ODIwNzA4NTgsIm5hbWUiOiJBbmt1ciBTdXJlamEiLCJwaG9uZV9udW1iZXIiOiIrOTE5NjM5NjM5NjM5IiwiZXhwIjoxNzgyMDc0NDU4LCJpYXQiOjE3ODIwNzA4NTgsImp0aSI6ImU2ODg0ODVmLWEwZWEtNDkzZi05MmZiLWFkNzk3MjRlZGMyYyIsImVtYWlsIjoiYW5rdXJzdXJlamFAZ21haWwuY29tIn0.yCJoGQ4E3IbsbPBqkEg-hf9sh-INjyE6dO1WZOoDbGScaUzbk02EoM0Zw-PrXnGPYZoeLOgfR6F5VSY4T7uUboZ3UzyvHJJ0PW9uTY4Tgh5YgCOOHhatPFRWv04pr56BxJJwlqTOM3jgO0pYjhGIr2UrUzV7y1OgX___99f4p2ZVDufjfFdc56Ka2B5fB2Xwk2vPGPWW0CL4MfnZ5RZLN5IU6tA4nm71piW5fYthxh8V37DZThsBysNHEt4WoeaxrK-ac09A4nPmluBKGujrt5MNHQQBUP2jYjZGKfgf_gojT0WiUpzIWv10CoUJvdeEqthvCw04CudXvg2CJe-VIQ\",\n  \"email\": \"ankursureja@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/refresh-token",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"refreshToken\": \"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.B6pfsFC8_GKjurrT4kbmDtHAaDOrjm5H4RiUUtc4ctt9Hsbbw84WaVhFvhU6khWb8af6lIipgTlcq2BDldbTvwvOTsB-MHNGDrcKyGsZQxvLVpVgM4HkyNpekJ18aZe8Wua2TmnHMqNJphY-LpRM1KCMmrrsnR7nVB5gfqUfaQ5-1_NnaTGZzFwMkIPS_jD5F6AGWWGbLsxakbAOjmuDvKdr_EGxwTa5utd2Yi5TiZycQpxB5HZMihWU1DgS_fXBRQbXg60vlIdMB7bzwiRIbq3yvx7z_dfaw_zA1CVYYc7sp30pAYoCVqasxT0hYrrZNkHLFvn3f0z3muVLbNMKhA.eLOEl1H4ptRlk3lu.hcWuGF7b2ZDL9FNSY0NkWVbDCwiMi92vTwv2IiGIHNQci8e9wCbzaiDaQKu3D4ZIo7pUdKHgyB48LAXYXrFPnv0-ZA7ibcTchHZMRMazw8elS2w6_M-niZ4uCqdF6wZfmQQT_BcXftrQyiSGUuN2USG2hfs3x-OejuUsi9nVMiWkal83tlgZZ-ofkXExmDSpRsrRrqvLxFrI3snPm2IgKXl2BgqGnmc-vK9YlwPlg_He-aEgJFJvgIlNn6JmzKX7PNzbD5QJgl53vjOVOYaZaIsfxpjYoB-sYKiaemzSqz20ozV6ZD6b65fG3GoYrV4Y3htD6WIzwJ9OaGRvT2jCLqPDzCyRUPsiRBG7_AUCfFGbxQxNRbyVVy90ubhnYlrVEDp7W3FbzX1QahfacgZ6SjfcazXU8BzGLG62pPWyepxM0MQNV7CQf_x0A86pO1rjs9EQXHF4hWOjCWqDvwK1dxjwXzrba2OwzIIITUfsEAW3m5uNXpDBzIWG2oVUKyRze7A0P6ewNBm1fe56unWcz6Srwkfu5bhej2CZQc3yK7b95Q7lNiFOEx4cmFAYJ4MokOTwhObJ5tCHiIXDqYUrq-pzcmQXJXj-9cSm6zRBy1YJUYLDuKYntN6PEl_ebjPsG8WIe03NodhwdLGOzetYallZslJo70OtgVQwus3-M-ZkX8KwXE-yExmm77pxCUH5D273lQ-kKct9lgWVc-43yCqLiePbyvjjBjjPNU9bJCs3rG0RoKCNlFA4Ufopz6e7RhyPitD2Pnr5ahk9m1m10drJOR4rBv2hI8_glUGKEYKg6961SOmM3qhoewFKdGj8U-MXjGqLDSQEzUJVVu4-cO4ddjHIW7G82zI8p96uMaJZ7EIZKkZ_CKHAPpen1q5WyfD-SxmLSc1GZ2_L86l2VRp3tuvBMYqHIv6lFapXxQMHMUR6ci8DaRxEP8VSUJ9faSM78nFIvrWKRVTw7avbcoHmnggdW13ccmh4BnFlJaYTQ_HOfxwPanhXB7tJRaB1QU3-LJbLC8QMN8fIY10aevZjgVtRUCNIEMUsrRzyCMhJl22HsFqgZ08IAu6_7QymWbxZkPKYdJscKr3gzkhn0fL2WqkhEmwD6x7BOh5euMjb0F1jtGXMj0yTNigT9JAt6BggFgzma_0UQ6cVgV9SuVbnbngQyZaYnCtpUSlcY4p12wcDFErSNM0PcyhPazoTKnuA70xh_y-ggG1EFOiUYvu-pJQN-SzZvNe_RXQfipEaOm2XWQHDeb8Hu7C_KAxwJ1wpwm87evQ0zyczrEk0h9n2gBXvhR8FTFbgQBY-wO31JDicJLiTrVgy.hnqgILkoGQ6qo50FzdzVJQ\",\n  \"idToken\": \"eyJraWQiOiI5U3JXZHdVbDUwUVJ0SXdvVE1UZUtnbzMxZkFreCs5Y1dQWDE3UWs4cnVnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbS9hcC1zb3V0aC0xX3I1SnZQY2JSTyIsInBob25lX251bWJlcl92ZXJpZmllZCI6dHJ1ZSwiY29nbml0bzp1c2VybmFtZSI6IjYxOTNjZDNhLTkwOTEtNzAzZC1mZTVhLTdkZGQ2NjA3ZmI3MiIsIm9yaWdpbl9qdGkiOiIwNGM5YjEwNy1kYWE2LTQ5ZjEtYjk2NC0yNWYwMzQ1NzM5YmUiLCJhdWQiOiI3MG9vb2E0ZTJjcXY5YTVxaDNodWdycGZzZyIsImV2ZW50X2lkIjoiYmFlY2Q3YWUtMWVhYy00MmJmLWJjZGEtNTQ0ODI1ZTNhNjJlIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3ODIwNzA4NTgsIm5hbWUiOiJBbmt1ciBTdXJlamEiLCJwaG9uZV9udW1iZXIiOiIrOTE5NjM5NjM5NjM5IiwiZXhwIjoxNzgyMDc0NDU4LCJpYXQiOjE3ODIwNzA4NTgsImp0aSI6ImU2ODg0ODVmLWEwZWEtNDkzZi05MmZiLWFkNzk3MjRlZGMyYyIsImVtYWlsIjoiYW5rdXJzdXJlamFAZ21haWwuY29tIn0.yCJoGQ4E3IbsbPBqkEg-hf9sh-INjyE6dO1WZOoDbGScaUzbk02EoM0Zw-PrXnGPYZoeLOgfR6F5VSY4T7uUboZ3UzyvHJJ0PW9uTY4Tgh5YgCOOHhatPFRWv04pr56BxJJwlqTOM3jgO0pYjhGIr2UrUzV7y1OgX___99f4p2ZVDufjfFdc56Ka2B5fB2Xwk2vPGPWW0CL4MfnZ5RZLN5IU6tA4nm71piW5fYthxh8V37DZThsBysNHEt4WoeaxrK-ac09A4nPmluBKGujrt5MNHQQBUP2jYjZGKfgf_gojT0WiUpzIWv10CoUJvdeEqthvCw04CudXvg2CJe-VIQ\",\n  \"email\": \"ankursureja@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/refresh-token",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"refresh-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4267"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10ab-rXTYBZQsn+NXs1zewqC1BEN2N9U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:43:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"accessToken\": \"eyJraWQiOiJaVFlMTjU1UE50WWdUVmlxcVEweEorU0c5VEFoaS95a3Awc1pGVE1WNDRNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImlzcyI6Imh0dHBzOi8vY29nbml0by1pZHAuYXAtc291dGgtMS5hbWF6b25hd3MuY29tL2FwLXNvdXRoLTFfcjVKdlBjYlJPIiwiY2xpZW50X2lkIjoiNzBvb29hNGUyY3F2OWE1cWgzaHVncnBmc2ciLCJvcmlnaW5fanRpIjoiMDRjOWIxMDctZGFhNi00OWYxLWI5NjQtMjVmMDM0NTczOWJlIiwiZXZlbnRfaWQiOiJiYWVjZDdhZS0xZWFjLTQyYmYtYmNkYS01NDQ4MjVlM2E2MmUiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNzgyMDcwODU4LCJleHAiOjE3ODIwNzgyMDksImlhdCI6MTc4MjA3MTAwOSwianRpIjoiMjkxYmViYWMtMzA5ZS00YTI4LWJiYWItZTM0NjRlMjI5MzM5IiwidXNlcm5hbWUiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIifQ.MVZzwNJPqFMdku9x_4Ycp6B8vsNbu9ZkJZjiKidaM4XYwC8hT2pGF6h6ZsOHdVYrqv6CRHk6Dzj1e33QmSXBRmPOm_XAxa2E-UoneKtTkPIGLEUCJAFk9-Xja8aN98U8zDsSD1kSh7LuelBrW63t4U814aI9E1E3Oqse6tN-UAo20sFKHRbNUdeRnzrac9NYQxfO6kuc6NpdSuTlEkhCWTh1rTa5fZudB26sLXpWseW1fwXFLLuUMHz0clyYy3_mL2B9rwjLtk7viIzaoGmd-p089VG4p8waawMNkXtG_FVbYhEw7SUFzvzAGJyFMDM1jdJqocjp4Dm_p6ZInA-qvA\",\n        \"refreshToken\": \"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.B6pfsFC8_GKjurrT4kbmDtHAaDOrjm5H4RiUUtc4ctt9Hsbbw84WaVhFvhU6khWb8af6lIipgTlcq2BDldbTvwvOTsB-MHNGDrcKyGsZQxvLVpVgM4HkyNpekJ18aZe8Wua2TmnHMqNJphY-LpRM1KCMmrrsnR7nVB5gfqUfaQ5-1_NnaTGZzFwMkIPS_jD5F6AGWWGbLsxakbAOjmuDvKdr_EGxwTa5utd2Yi5TiZycQpxB5HZMihWU1DgS_fXBRQbXg60vlIdMB7bzwiRIbq3yvx7z_dfaw_zA1CVYYc7sp30pAYoCVqasxT0hYrrZNkHLFvn3f0z3muVLbNMKhA.eLOEl1H4ptRlk3lu.hcWuGF7b2ZDL9FNSY0NkWVbDCwiMi92vTwv2IiGIHNQci8e9wCbzaiDaQKu3D4ZIo7pUdKHgyB48LAXYXrFPnv0-ZA7ibcTchHZMRMazw8elS2w6_M-niZ4uCqdF6wZfmQQT_BcXftrQyiSGUuN2USG2hfs3x-OejuUsi9nVMiWkal83tlgZZ-ofkXExmDSpRsrRrqvLxFrI3snPm2IgKXl2BgqGnmc-vK9YlwPlg_He-aEgJFJvgIlNn6JmzKX7PNzbD5QJgl53vjOVOYaZaIsfxpjYoB-sYKiaemzSqz20ozV6ZD6b65fG3GoYrV4Y3htD6WIzwJ9OaGRvT2jCLqPDzCyRUPsiRBG7_AUCfFGbxQxNRbyVVy90ubhnYlrVEDp7W3FbzX1QahfacgZ6SjfcazXU8BzGLG62pPWyepxM0MQNV7CQf_x0A86pO1rjs9EQXHF4hWOjCWqDvwK1dxjwXzrba2OwzIIITUfsEAW3m5uNXpDBzIWG2oVUKyRze7A0P6ewNBm1fe56unWcz6Srwkfu5bhej2CZQc3yK7b95Q7lNiFOEx4cmFAYJ4MokOTwhObJ5tCHiIXDqYUrq-pzcmQXJXj-9cSm6zRBy1YJUYLDuKYntN6PEl_ebjPsG8WIe03NodhwdLGOzetYallZslJo70OtgVQwus3-M-ZkX8KwXE-yExmm77pxCUH5D273lQ-kKct9lgWVc-43yCqLiePbyvjjBjjPNU9bJCs3rG0RoKCNlFA4Ufopz6e7RhyPitD2Pnr5ahk9m1m10drJOR4rBv2hI8_glUGKEYKg6961SOmM3qhoewFKdGj8U-MXjGqLDSQEzUJVVu4-cO4ddjHIW7G82zI8p96uMaJZ7EIZKkZ_CKHAPpen1q5WyfD-SxmLSc1GZ2_L86l2VRp3tuvBMYqHIv6lFapXxQMHMUR6ci8DaRxEP8VSUJ9faSM78nFIvrWKRVTw7avbcoHmnggdW13ccmh4BnFlJaYTQ_HOfxwPanhXB7tJRaB1QU3-LJbLC8QMN8fIY10aevZjgVtRUCNIEMUsrRzyCMhJl22HsFqgZ08IAu6_7QymWbxZkPKYdJscKr3gzkhn0fL2WqkhEmwD6x7BOh5euMjb0F1jtGXMj0yTNigT9JAt6BggFgzma_0UQ6cVgV9SuVbnbngQyZaYnCtpUSlcY4p12wcDFErSNM0PcyhPazoTKnuA70xh_y-ggG1EFOiUYvu-pJQN-SzZvNe_RXQfipEaOm2XWQHDeb8Hu7C_KAxwJ1wpwm87evQ0zyczrEk0h9n2gBXvhR8FTFbgQBY-wO31JDicJLiTrVgy.hnqgILkoGQ6qo50FzdzVJQ\",\n        \"idToken\": \"eyJraWQiOiI5U3JXZHdVbDUwUVJ0SXdvVE1UZUtnbzMxZkFreCs5Y1dQWDE3UWs4cnVnPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI2MTkzY2QzYS05MDkxLTcwM2QtZmU1YS03ZGRkNjYwN2ZiNzIiLCJjb2duaXRvOmdyb3VwcyI6WyJ1c2VyIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2NvZ25pdG8taWRwLmFwLXNvdXRoLTEuYW1hem9uYXdzLmNvbS9hcC1zb3V0aC0xX3I1SnZQY2JSTyIsInBob25lX251bWJlcl92ZXJpZmllZCI6dHJ1ZSwiY29nbml0bzp1c2VybmFtZSI6IjYxOTNjZDNhLTkwOTEtNzAzZC1mZTVhLTdkZGQ2NjA3ZmI3MiIsIm9yaWdpbl9qdGkiOiIwNGM5YjEwNy1kYWE2LTQ5ZjEtYjk2NC0yNWYwMzQ1NzM5YmUiLCJhdWQiOiI3MG9vb2E0ZTJjcXY5YTVxaDNodWdycGZzZyIsImV2ZW50X2lkIjoiYmFlY2Q3YWUtMWVhYy00MmJmLWJjZGEtNTQ0ODI1ZTNhNjJlIiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE3ODIwNzA4NTgsIm5hbWUiOiJBbmt1ciBTdXJlamEiLCJwaG9uZV9udW1iZXIiOiIrOTE5NjM5NjM5NjM5IiwiZXhwIjoxNzgyMDc0NjA5LCJpYXQiOjE3ODIwNzEwMDksImp0aSI6IjQ0MDcwODkxLWEzMTYtNGMyOC1hYmM4LTM4MzdjODAzYzUyMyIsImVtYWlsIjoiYW5rdXJzdXJlamFAZ21haWwuY29tIn0.A8Dw-pFl7dSA0NZNjYyKV59iYRNUp0HR1inBqdnYOxA5XvCYHNHYNXPdo7pZGnNb8BnpwO8qY8KW2K4oDRfkLOW9mn4cptscyvnRlvCvuazkgGMxtJtC5dakUqq0209MLWYbBvkbBj_gBrkzYgdBjDnLCinFS59fdcpivvMnuP6TBb8iMz-Pbm58C1x-dEryhSjIB9iMzE7mxab8PIjjMScD6yw7Eq4WVJUUBf4_UZH9Xub4odccPMBjg6B-XkeqZryAqIkzIgJZb2faexaoHbRFYuPtY4OkWinZPOqqDfU_LeB8bqVdykA6TQFzF8sJjmsWnidyuJ5ANEgjdq8rhQ\",\n        \"expiresIn\": 7200,\n        \"tokenType\": \"Bearer\"\n    },\n    \"timestamp\": \"2026-06-21T19:43:29.966Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ankursureja@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/forgot-password",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Forgot Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ankursureja@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/forgot-password",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "109"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6d-nOTVhudkEJa/ZpNsc9Na7Vvks+A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:45:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Otp has been sent in your email.\"\n    },\n    \"timestamp\": \"2026-06-21T19:45:23.934Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Confirm forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"confirmationCode\": \"066558\",\n  \"newPassword\": \"Ankur@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/auth/confirm-forgot-password",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"confirm-forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Confirm forgot password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"ankursureja@gmail.com\",\n  \"confirmationCode\": \"066558\",\n  \"newPassword\": \"Ankur@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/auth/confirm-forgot-password",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"confirm-forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-BlQ7D3XkJi8IVKYCYmsw5D6evrU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"message\": \"Password has been reset successfully. You can now log in.\"\n    },\n    \"timestamp\": \"2026-06-21T19:47:11.434Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Create Patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Alice Blue\",\n  \"address\": \"204, main street, AMD\",\n  \"conditions\": [\n    \"Hypertension\",\n    \"Asthma\"\n  ],\n  \"allergies\": [\n    \"Penicillin\",\n    \"Peanuts\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Alice Blue\",\n  \"address\": \"204, main street, AMD\",\n  \"conditions\": [\n    \"Hypertension\",\n    \"Asthma\"\n  ],\n  \"allergies\": [\n    \"Penicillin\",\n    \"Peanuts\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/patients",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"patients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13c-X0GICm4quWu8L2L+SNQB9TAl9n0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:50:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"655e3fb7-3185-4d56-abb9-213ddda572bf\",\n        \"name\": \"Alice Blue\",\n        \"address\": \"204, main street, AMD\",\n        \"conditions\": [\n            \"Hypertension\",\n            \"Asthma\"\n        ],\n        \"allergies\": [\n            \"Penicillin\",\n            \"Peanuts\"\n        ],\n        \"createdAt\": \"2026-06-21T19:50:38.278Z\",\n        \"updatedAt\": \"2026-06-21T19:50:38.278Z\"\n    },\n    \"timestamp\": \"2026-06-21T19:50:39.004Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All patients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients?page=1&limit=20",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All patients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/patients?page=1&limit=20",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"patients"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1330"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"532-W7pT5qQS9d7yPBDWimojWFYbrVA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:51:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": \"52fbb21d-ebe7-4ec4-b7f1-490de1ebae96\",\n                \"name\": \"J patel\",\n                \"address\": \"123 Main Street AMD\",\n                \"conditions\": [\n                    \"Hypertension\",\n                    \"Asthma\"\n                ],\n                \"allergies\": [\n                    \"Penicillin\",\n                    \"Peanuts\"\n                ],\n                \"createdAt\": \"2026-06-20T11:50:52.820Z\",\n                \"updatedAt\": \"2026-06-20T11:50:52.820Z\"\n            },\n            {\n                \"id\": \"0544448d-ac1a-45e2-a437-6b0a07c1eb18\",\n                \"name\": \"H patel\",\n                \"address\": \"Nava Nagar, Junagadh\",\n                \"conditions\": [\n                    \"Asthma\"\n                ],\n                \"allergies\": [\n                    \"Peanuts\"\n                ],\n                \"createdAt\": \"2026-06-20T11:51:38.119Z\",\n                \"updatedAt\": \"2026-06-20T11:51:38.119Z\"\n            },\n            {\n                \"id\": \"9bed339d-a400-49f7-b0a9-fe6cc8cf6699\",\n                \"name\": \"Meena Shah\",\n                \"address\": \"Surat\",\n                \"conditions\": [\n                    \"Hypertension\",\n                    \"Asthma\"\n                ],\n                \"allergies\": [\n                    \"Peanuts\"\n                ],\n                \"createdAt\": \"2026-06-20T11:52:43.209Z\",\n                \"updatedAt\": \"2026-06-20T12:06:44.462Z\"\n            },\n            {\n                \"id\": \"655e3fb7-3185-4d56-abb9-213ddda572bf\",\n                \"name\": \"Alice Blue\",\n                \"address\": \"204, main street, AMD\",\n                \"conditions\": [\n                    \"Hypertension\",\n                    \"Asthma\"\n                ],\n                \"allergies\": [\n                    \"Penicillin\",\n                    \"Peanuts\"\n                ],\n                \"createdAt\": \"2026-06-21T19:50:38.278Z\",\n                \"updatedAt\": \"2026-06-21T19:50:38.278Z\"\n            },\n            {\n                \"id\": \"f768e93a-dab6-4217-a64d-24a8cf69bf34\",\n                \"name\": \"Minal shah\",\n                \"address\": \"c 401, main street, vadodara\",\n                \"conditions\": [\n                    \"Hypertension\",\n                    \"Asthma\"\n                ],\n                \"allergies\": [\n                    \"Penicillin\",\n                    \"Peanuts\"\n                ],\n                \"createdAt\": \"2026-06-21T13:03:41.375Z\",\n                \"updatedAt\": \"2026-06-21T13:03:41.375Z\"\n            }\n        ],\n        \"page\": 1,\n        \"limit\": 20,\n        \"total\": 5,\n        \"totalPages\": 1\n    },\n    \"timestamp\": \"2026-06-21T19:51:53.616Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "search by Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients/search/by-address?address=Junagadh",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"search",
+								"by-address"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "Junagadh"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search by Address",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/patients/search/by-address?address=Junagadh",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										"search",
+										"by-address"
+									],
+									"query": [
+										{
+											"key": "address",
+											"value": "Junagadh"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-Y2lUXXrA19B1PKf6EFV26gDQCdU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:53:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"0544448d-ac1a-45e2-a437-6b0a07c1eb18\",\n            \"name\": \"H patel\",\n            \"address\": \"Nava Nagar, Junagadh\",\n            \"conditions\": [\n                \"Asthma\"\n            ],\n            \"allergies\": [\n                \"Peanuts\"\n            ],\n            \"createdAt\": \"2026-06-20T11:51:38.119Z\",\n            \"updatedAt\": \"2026-06-20T11:51:38.119Z\"\n        }\n    ],\n    \"timestamp\": \"2026-06-21T19:53:14.610Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "search by condition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients/search/by-condition?condition=Hypertension",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"search",
+								"by-condition"
+							],
+							"query": [
+								{
+									"key": "condition",
+									"value": "Hypertension"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search by condition",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}/api/v1/patients/search/by-condition?condition=Hypertension",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										"search",
+										"by-condition"
+									],
+									"query": [
+										{
+											"key": "condition",
+											"value": "Hypertension"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1053"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41d-Xh5PupwDU1k54Fa+HWzqfqsjgf4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:54:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"52fbb21d-ebe7-4ec4-b7f1-490de1ebae96\",\n            \"name\": \"J patel\",\n            \"address\": \"123 Main Street AMD\",\n            \"conditions\": [\n                \"Hypertension\",\n                \"Asthma\"\n            ],\n            \"allergies\": [\n                \"Penicillin\",\n                \"Peanuts\"\n            ],\n            \"createdAt\": \"2026-06-20T11:50:52.820Z\",\n            \"updatedAt\": \"2026-06-20T11:50:52.820Z\"\n        },\n        {\n            \"id\": \"655e3fb7-3185-4d56-abb9-213ddda572bf\",\n            \"name\": \"Alice Blue\",\n            \"address\": \"204, main street, AMD\",\n            \"conditions\": [\n                \"Hypertension\",\n                \"Asthma\"\n            ],\n            \"allergies\": [\n                \"Penicillin\",\n                \"Peanuts\"\n            ],\n            \"createdAt\": \"2026-06-21T19:50:38.278Z\",\n            \"updatedAt\": \"2026-06-21T19:50:38.278Z\"\n        },\n        {\n            \"id\": \"9bed339d-a400-49f7-b0a9-fe6cc8cf6699\",\n            \"name\": \"Meena Shah\",\n            \"address\": \"Surat\",\n            \"conditions\": [\n                \"Hypertension\",\n                \"Asthma\"\n            ],\n            \"allergies\": [\n                \"Peanuts\"\n            ],\n            \"createdAt\": \"2026-06-20T11:52:43.209Z\",\n            \"updatedAt\": \"2026-06-20T12:06:44.462Z\"\n        },\n        {\n            \"id\": \"f768e93a-dab6-4217-a64d-24a8cf69bf34\",\n            \"name\": \"Minal shah\",\n            \"address\": \"c 401, main street, vadodara\",\n            \"conditions\": [\n                \"Hypertension\",\n                \"Asthma\"\n            ],\n            \"allergies\": [\n                \"Penicillin\",\n                \"Peanuts\"\n            ],\n            \"createdAt\": \"2026-06-21T13:03:41.375Z\",\n            \"updatedAt\": \"2026-06-21T13:03:41.375Z\"\n        }\n    ],\n    \"timestamp\": \"2026-06-21T19:54:28.975Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/patients/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get patient",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/patients/{{id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-MZKscKlvdjQkgMPPmq5Pzkrw8Cc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 20:01:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"52fbb21d-ebe7-4ec4-b7f1-490de1ebae96\",\n        \"name\": \"Jayesh Patel\",\n        \"address\": \"456 Oak Ave, Springfield, IL 62701\",\n        \"conditions\": [\n            \"Hypertension\"\n        ],\n        \"allergies\": [\n            \"Penicillin\"\n        ],\n        \"createdAt\": \"2026-06-20T11:50:52.820Z\",\n        \"updatedAt\": \"2026-06-21T19:57:35.420Z\"\n    },\n    \"timestamp\": \"2026-06-21T20:01:32.159Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jayesh Patel\",\n  \"address\": \"456 Oak Ave, Springfield, IL 62701\",\n  \"conditions\": [\n    \"Hypertension\"\n  ],\n  \"allergies\": [\n    \"Penicillin\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients/{{id}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update patient",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Jayesh Patel\",\n  \"address\": \"456 Oak Ave, Springfield, IL 62701\",\n  \"conditions\": [\n    \"Hypertension\"\n  ],\n  \"allergies\": [\n    \"Penicillin\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseurl}}/api/v1/patients/{{id}}",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"patients",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-Z8IWxQeL8t3sfx2xV0BvwSxF4Yg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jun 2026 19:57:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": \"52fbb21d-ebe7-4ec4-b7f1-490de1ebae96\",\n        \"name\": \"Jayesh Patel\",\n        \"address\": \"456 Oak Ave, Springfield, IL 62701\",\n        \"conditions\": [\n            \"Hypertension\"\n        ],\n        \"allergies\": [\n            \"Penicillin\"\n        ],\n        \"createdAt\": \"2026-06-20T11:50:52.820Z\",\n        \"updatedAt\": \"2026-06-21T19:57:35.420Z\"\n    },\n    \"timestamp\": \"2026-06-21T19:57:35.569Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/api/v1/patients/{{id}}",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"patients",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

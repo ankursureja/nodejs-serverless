@@ -1,0 +1,129 @@
+service: apotec-task-api
+
+frameworkVersion: '4'
+
+useDotenv: true
+
+plugins:
+    - serverless-offline
+
+custom:
+    stage: ${opt:stage, 'dev'}
+    patientsTable: ${env:DYNAMODB_PATIENTS_TABLE, 'patients-${self:custom.stage}'}
+    serverless-offline:
+        httpPort: ${env:SERVERLESS_HTTP_PORT, 3000}
+        lambdaPort: ${env:SERVERLESS_LAMBDA_PORT, 3002}
+        noPrependStageInUrl: true
+        useInProcess: true
+
+provider:
+    name: aws
+    runtime: nodejs20.x
+    stage: ${self:custom.stage}
+    region: 'ap-south-1'
+    memorySize: 1024
+    timeout: 29
+    logRetentionInDays: 14
+    httpApi:
+        cors:
+            allowedOrigins:
+                - '*'
+            allowedHeaders:
+                - Content-Type
+                - Authorization
+                - X-Amz-Date
+                - X-Api-Key
+                - X-Amz-Security-Token
+            allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - PATCH
+                - DELETE
+                - OPTIONS
+    environment:
+        NODE_ENV: ${env:NODE_ENV, 'development'}
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+        DYNAMODB_PATIENTS_TABLE: ${self:custom.patientsTable}
+        DYNAMODB_ENDPOINT: ${env:DYNAMODB_ENDPOINT, ''}
+        AWS_COGNITO_USER_POOL_ID: ${env:AWS_COGNITO_USER_POOL_ID, ''}
+        AWS_COGNITO_CLIENT_ID: ${env:AWS_COGNITO_CLIENT_ID, ''}
+        AWS_COGNITO_SECRET: ${env:AWS_COGNITO_SECRET, ''}
+        OPENSEARCH_ENDPOINT: ${env:OPENSEARCH_ENDPOINT, ''}
+        OPENSEARCH_PATIENTS_INDEX: ${env:OPENSEARCH_PATIENTS_INDEX, 'patients'}
+        OPENSEARCH_SERVICE: ${env:OPENSEARCH_SERVICE, 'es'}
+        OPENSEARCH_DISABLE_AUTH: ${env:OPENSEARCH_DISABLE_AUTH, 'false'}
+        ENABLE_SWAGGER: ${env:ENABLE_SWAGGER, 'true'}
+    iam:
+        role:
+            statements:
+                - Effect: Allow
+                  Action:
+                      - dynamodb:GetItem
+                      - dynamodb:PutItem
+                      - dynamodb:UpdateItem
+                      - dynamodb:DeleteItem
+                      - dynamodb:Query
+                      - dynamodb:Scan
+                      - dynamodb:TransactWriteItems
+                      - dynamodb:BatchWriteItem
+                  Resource:
+                      - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:custom.patientsTable}
+                - Effect: Allow
+                  Action:
+                      - cognito-idp:InitiateAuth
+                      - cognito-idp:SignUp
+                      - cognito-idp:ForgotPassword
+                      - cognito-idp:ConfirmForgotPassword
+                      - cognito-idp:AdminAddUserToGroup
+                      - cognito-idp:AdminListGroupsForUser
+                      - cognito-idp:AdminGetUser
+                      - cognito-idp:AdminConfirmSignUp
+                      - cognito-idp:AdminUpdateUserAttributes
+                  Resource:
+                      - arn:aws:cognito-idp:${aws:region}:${aws:accountId}:userpool/${env:AWS_COGNITO_USER_POOL_ID, '*'}
+
+functions:
+    api:
+        handler: dist/lambda.handler
+        events:
+            - httpApi:
+                  method: ANY
+                  path: /
+            - httpApi:
+                  method: ANY
+                  path: /{proxy+}
+
+package:
+    individually: false
+    patterns:
+        - '!**'
+        - 'dist/**'
+        - 'node_modules/**'
+        - 'package.json'
+        - 'package-lock.json'
+
+resources:
+    Resources:
+        PatientsTable:
+            Type: AWS::DynamoDB::Table
+            Condition: CreatePatientsTable
+            Properties:
+                TableName: ${self:custom.patientsTable}
+                BillingMode: PAY_PER_REQUEST
+                AttributeDefinitions:
+                    - AttributeName: pk
+                      AttributeType: S
+                    - AttributeName: sk
+                      AttributeType: S
+                KeySchema:
+                    - AttributeName: pk
+                      KeyType: HASH
+                    - AttributeName: sk
+                      KeyType: RANGE
+
+    Conditions:
+        CreatePatientsTable:
+            Fn::Equals:
+                - ${env:CREATE_DYNAMODB_TABLE, 'false'}
+                - 'true'
